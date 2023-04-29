@@ -1,13 +1,171 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "montseratt", "sans-serif";
 }
+
+.app {
+  background-color: lightblue;
+  background-size: cover;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.app.warm {
+  background-color: rgba(220, 188, 111, 0.608);
+}
+
+.app.hot {
+  background-color: rgba(212, 61, 7, 0.608);
+}
+
+main {
+  min-height: 100vh;
+  padding: 25px;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 58px;
+  padding: 0 40px 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 36px;
+}
+
+.location-icon-container {
+  position: relative;
+}
+
+.location-icon-container .location-icon {
+  margin-top: 5px;
+  height: 29px;
+  width: 22px;
+}
+
+.location-icon-container .location-icon-tooltip {
+  text-align: center;
+  width: 70px;
+  position: absolute;
+  top: 100%;
+  left: -23px;
+  height: 100;
+  visibility: hidden;
+  -webkit-transition-timing-function: cubic-bezier();
+  transition-timing-function: cubic-bezier();
+  -webkit-transition: visibility 0.5s, height 0.5s, width 0.5s;
+  transition: visibility 0.5s, height 0.5s, width 0.5s;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.586);
+  font-size: 12px;
+}
+
+.location-icon-container:hover .location-icon-tooltip {
+  visibility: visible;
+}
+
+.location-icon-container:hover .location-icon {
+  height: 30px;
+  width: 23px;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 60%;
+  padding: 9px;
+  outline: none;
+  border: 1px solid whitesmoke;
+  border-top: 0px;
+  border-radius: 12px 12px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: medium;
+  -webkit-box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 2px black;
+
+  -webkit-transform: 0.4s ease;
+  transform: 0.4s ease;
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.location-box .location {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px rgba(50, 50, 70, 0.5);
+  margin: 4px;
+}
+
+.location-box .date {
+  color: black;
+  font-size: 17px;
+  font-style: italic;
+  text-align: center;
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temperature {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 8px 20px;
+  color: white;
+  font-size: 82px;
+  font-weight: 900;
+  letter-spacing: px;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.03);
+  text-align: center;
+  -webkit-box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .weather {
+  color: white;
+  font-size: 48px;
+  font-weight: 400;
+  text-shadow: 1px 1px rgba(50, 50, 70, 0.5);
+}
+
+.navbar {
+  background-color: rgb(233, 235, 229);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bolder;
+  font-family: monospace;
+  color: darkgreen;
+}
+
+.github-icon {
+  font-size: 25px;
+}
+
+.help-icon {
+  font-size: 21px;
+}
+
