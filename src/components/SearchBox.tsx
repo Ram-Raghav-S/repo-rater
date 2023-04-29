@@ -1,26 +1,23 @@
-import React from "react";
-import locationSign from "../assets/location-sign.png";
+import { debug } from "console";
+import React, { useState } from "react";
 
-interface SearchBoxProps {
-  setWeather: (newWeather: any) => void;
-}
-
-const weatherApi = {
-  key: "839fe94c6921794a7c2aa11baaf2fb58", // TODO: fix key leak
-  base: "https://api.openweathermap.org/data/2.5/",
-};
 
 const SearchBox = () => {
+  const [repoURL, setRepoURL] = useState("");
+
   return (
-    <>
       <div className="search-box">
         <input
+        value={repoURL}
           type="text"
+          onChange={(e) => {
+            setRepoURL(e.target.value);
+            console.log(repoURL);
+          }}
           className="search-bar"
-          placeholder="Enter Repository URL (htt)"
+          placeholder="Enter Repository URL"
         />
       </div>
-    </>
   );
 };
 

@@ -30,67 +30,19 @@ main {
 }
 
 .search-box {
-  width: 100%;
-  margin: 0 0 58px;
-  padding: 0 40px 0 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 16px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: 36px;
+  flex: 1;
 }
 
-.location-icon-container {
-  position: relative;
-}
-
-.location-icon-container .location-icon {
-  margin-top: 5px;
-  height: 29px;
-  width: 22px;
-}
-
-.location-icon-container .location-icon-tooltip {
-  text-align: center;
-  width: 70px;
-  position: absolute;
-  top: 100%;
-  left: -23px;
-  height: 100;
-  visibility: hidden;
-  -webkit-transition-timing-function: cubic-bezier();
-  transition-timing-function: cubic-bezier();
-  -webkit-transition: visibility 0.5s, height 0.5s, width 0.5s;
-  transition: visibility 0.5s, height 0.5s, width 0.5s;
-  padding: 3px;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.586);
-  font-size: 12px;
-}
-
-.location-icon-container:hover .location-icon-tooltip {
-  visibility: visible;
-}
-
-.location-icon-container:hover .location-icon {
-  height: 30px;
-  width: 23px;
-}
 
 .search-box .search-bar {
+  height: 98%;
   display: block;
-  width: 60%;
+  width: 100%;
   padding: 9px;
   outline: none;
   border: 1px solid whitesmoke;
   border-top: 0px;
-  border-radius: 12px 12px;
+  border-radius: 8px 8px;
   color: black;
   background-color: rgba(255, 255, 255, 0.5);
   font-size: medium;
@@ -103,23 +55,6 @@ main {
 
 .search-box .search-bar:focus {
   background-color: rgba(255, 255, 255, 0.75);
-}
-
-.location-box .location {
-  color: #fff;
-  font-size: 32px;
-  font-weight: 500;
-  text-align: center;
-  color: black;
-  text-shadow: 1px 1px rgba(50, 50, 70, 0.5);
-  margin: 4px;
-}
-
-.location-box .date {
-  color: black;
-  font-size: 17px;
-  font-style: italic;
-  text-align: center;
 }
 
 .weather-box {
@@ -169,3 +104,9 @@ main {
   font-size: 21px;
 }
 
+.search-container {
+  padding: 0 20% 0 20%;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
