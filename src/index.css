@@ -16,23 +16,16 @@ body {
   transition: 0.4s ease-out;
 }
 
-.app.warm {
-  background-color: rgba(220, 188, 111, 0.608);
-}
-
-.app.hot {
-  background-color: rgba(212, 61, 7, 0.608);
-}
 
 main {
   min-height: 100vh;
   padding: 25px;
+  padding-bottom: 0;
 }
 
 .search-box {
   flex: 1;
 }
-
 
 .search-box .search-bar {
   height: 98%;
@@ -57,33 +50,6 @@ main {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-.weather-box {
-  text-align: center;
-}
-
-.weather-box .temperature {
-  position: relative;
-  display: inline-block;
-  margin: 30px auto 15px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 8px 20px;
-  color: white;
-  font-size: 82px;
-  font-weight: 900;
-  letter-spacing: px;
-  text-shadow: 3px 6px rgba(50, 50, 70, 0.03);
-  text-align: center;
-  -webkit-box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.weather-box .weather {
-  color: white;
-  font-size: 48px;
-  font-weight: 400;
-  text-shadow: 1px 1px rgba(50, 50, 70, 0.5);
-}
 
 .navbar {
   background-color: rgb(233, 235, 229);
@@ -109,4 +75,107 @@ main {
   display: flex;
   justify-content: space-around;
   gap: 10px;
+}
+
+br {
+  display: block;
+  content: "";
+  margin-top: 7px;
+}
+
+p {
+  font-size: 1em;
+  letter-spacing: 0.75px;
+}
+
+.output {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  width: 80%;
+  height: 500px;
+  margin: 50px auto auto auto;
+  border-radius: 5px;
+}
+
+.gpt-output {
+  padding: 2em;
+  border-radius: 10px;
+  flex: 1;
+  border: 1px solid black;
+  background-color: #fafefa;
+  overflow-y: hidden;
+}
+
+.sonarqube-output {
+  padding: 2em;
+  border-radius: 10px;
+  flex: 1;
+  border: 1px solid black;
+  background-color: #fafefa;
+  overflow-y: hidden;
+}
+
+.stats {
+  border-radius: 10px;
+  flex: 1;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.stats .stars {
+  padding: 2px;
+  padding-left: 3px;
+  border: 1px solid black;
+  background-color: #fafefa;
+  border-radius: 10px;
+}
+.stats .forks {
+  padding: 2px;
+  padding-left: 3px;
+  border: 1px solid black;
+  background-color: #fafefa;
+  border-radius: 10px;
+}
+.stats .open-issues {
+  padding: 2px;
+  padding-left: 3px;
+  border: 1px solid black;
+  background-color: #fafefa;
+  border-radius: 10px;
+}
+.stats .pull-requests {
+  padding: 2px;
+  padding-left: 3px;
+  border: 1px solid black;
+  background-color: #fafefa;
+  border-radius: 10px;
+}
+.stats .releases {
+  padding: 2px;
+  padding-left: 3px;
+  border: 1px solid black;
+  background-color: #fafefa;
+  border-radius: 10px;
+}
+.stats .contributors {
+  padding: 2px;
+  padding-left: 3px;
+  border: 1px solid black;
+  background-color: #fafefa;
+  border-radius: 10px;
+}
+
+.graph {
+  flex: 0.3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.progress-level {
+  font-size: large;
 }

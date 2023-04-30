@@ -1,8 +1,7 @@
-import { debug } from "console";
 import React, { useState } from "react";
 
 
-const SearchBox = () => {
+const SearchBox = (props: {"placeholder": string}) => {
   const [repoURL, setRepoURL] = useState("");
 
   return (
@@ -12,10 +11,9 @@ const SearchBox = () => {
           type="text"
           onChange={(e) => {
             setRepoURL(e.target.value);
-            console.log(repoURL);
           }}
           className="search-bar"
-          placeholder="Enter Repository URL"
+          placeholder={props.placeholder}
         />
       </div>
   );
