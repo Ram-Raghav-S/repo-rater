@@ -25,7 +25,7 @@ function App() {
   });
 
   const rateRepo = async () => {
-    let statsResponse = await fetch("/userMetrics", {
+    let statsResponse = await fetch("http://localhost:5000/userMetrics", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url: repoURL, path: filePath }),
@@ -33,7 +33,7 @@ function App() {
     let stats = await statsResponse.json();
     setStats(stats);
 
-    let optimalResponse = await fetch("/GPT_optimized", {
+    let optimalResponse = await fetch("http://localhost:5000/GPT_optimized", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url: repoURL, path: filePath }),
@@ -41,7 +41,7 @@ function App() {
     let optimalCode = await optimalResponse.json();
     setOptimalCode(optimalCode);
 
-    let suggestionsResponse = await fetch("/GPT_Review", {
+    let suggestionsResponse = await fetch("http://localhost:5000/GPT_Review", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url: repoURL, path: filePath }),
@@ -92,12 +92,8 @@ function App() {
         </div>
 
         <div className="output center">
-          <div className="gpt-output">
-            Optimized Code: {optimalCode}
-          </div>
-          <div className="sonarqube-output">
-            Suggestions: {suggestions}
-          </div>
+          <div className="gpt-output">Optimized Code: {optimalCode}</div>
+          <div className="sonarqube-output">Suggestions: {suggestions}</div>
           <div className="stats">
             <div className="graph">
               <CircularProgress value={40} color="green.400" size="95%">
@@ -106,6 +102,7 @@ function App() {
                 </CircularProgressLabel>
               </CircularProgress>
             </div>
+
             <div className="stars">Stars: {stats.stargazers_count}</div>
             <div className="forks">Forks: {stats.forks_count}</div>
             <div className="open-issues">
