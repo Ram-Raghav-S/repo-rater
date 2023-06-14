@@ -7,4 +7,3 @@ Repo-Rater evaluates and analyzes the user's code using OpenAI to provide an ove
 ### How we built it
 Repo-Rater was built using GitHub API to connect the repository with OpenAI API which is used to analyze and provide feedback. The project runs on Python and the APIs on the back end, and HTML, typescript, and react on the front end, with Flask connecting the two together.
 
---Note: Repo Rater is currently incomplete. We plan on finishing development in the future.
